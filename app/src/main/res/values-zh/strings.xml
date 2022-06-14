@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Noodeal</string>
+    <string name="navigation_drawer_open">打开导航侧边栏</string>
+    <string name="navigation_drawer_close">关闭导航侧边栏</string>
+    <string name="nav_header_title">导航栏标题</string>
+    <string name="nav_header_subtitle">导航栏副标题</string>
+    <string name="nav_header_desc">导航栏描述</string>
+    <string name="action_about">关于</string>
+
+    <string name="menu_home">主页</string>
+    <string name="menu_download">下载</string>
+    <string name="menu_settings">设置</string>
+</resources>
