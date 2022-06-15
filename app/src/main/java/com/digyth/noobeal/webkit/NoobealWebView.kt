@@ -5,6 +5,7 @@ import android.graphics.Bitmap
 import android.util.AttributeSet
 import android.view.ActionMode
 import android.webkit.*
+import android.widget.Toast
 
 class NoobealWebView : WebView {
 
@@ -52,6 +53,17 @@ class NoobealWebView : WebView {
                 super.onProgressChanged(view, newProgress)
                 listener?.onProgressChanged(view, newProgress)
             }
+
+            override fun onJsAlert(
+                view: WebView?,
+                url: String?,
+                message: String?,
+                result: JsResult?
+            ): Boolean {
+                Toast.makeText(context, message, Toast.LENGTH_SHORT).show()
+                result?.confirm()
+                return true
+            }
         }
     }
 
@@ -66,4 +78,6 @@ class NoobealWebView : WebView {
     override fun getVisibility(): Int {
         return VISIBLE
     }
+
+
 }

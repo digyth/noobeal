@@ -7,6 +7,8 @@ import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.webkit.WebView
+import android.widget.EditText
+import android.widget.ProgressBar
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
@@ -110,11 +112,12 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     }
 
 
-    val urlEditor = binding.appBarMain.webViewUrl
-    val refreshBtn = menu.findItem(R.id.action_refresh)
-    val progressBar = binding.appBarMain.contentMain.webViewProgress
+    private val urlEditor: EditText by lazy { binding.appBarMain.webViewUrl }
+    private val refreshBtn: MenuItem by lazy { menu.findItem(R.id.action_refresh) }
+    private val progressBar: ProgressBar by lazy { binding.appBarMain.contentMain.webViewProgress }
 
     override fun loadUrl(url: String): String {
+        if (url.startsWith("javascript:")) return url
         val newUrl = if (url.startsWith("http")) {
             url
         } else {
@@ -132,6 +135,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     override fun onPageFinished(view: WebView, url: String) {
         refreshBtn.icon = getDrawable(R.drawable.ic_toolbar_refresh)
         loading = false
+        view.loadUrl(Constants.code_js_inject)
     }
 
     override fun onProgressChanged(view: WebView, newProgress: Int) {
