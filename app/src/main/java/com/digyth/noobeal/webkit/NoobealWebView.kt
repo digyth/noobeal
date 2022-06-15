@@ -3,8 +3,8 @@ package com.digyth.noobeal.webkit
 import android.content.Context
 import android.graphics.Bitmap
 import android.util.AttributeSet
+import android.view.ActionMode
 import android.webkit.*
-import com.digyth.noobeal.R
 
 class NoobealWebView : WebView {
 
@@ -61,5 +61,9 @@ class NoobealWebView : WebView {
 
     override fun loadUrl(url: String) {
         super.loadUrl(listener?.loadUrl(url) ?: url)
+    }
+
+    override fun getVisibility(): Int {
+        return VISIBLE
     }
 }

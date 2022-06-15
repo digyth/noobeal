@@ -1,21 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Noodeal</string>
-    <string name="navigation_drawer_open">打开导航侧边栏</string>
-    <string name="navigation_drawer_close">关闭导航侧边栏</string>
+    <string name="app_name">Noobeal</string>
+    <!--    navigation drawer button  -->
+    <string name="navigation_drawer_open">打开侧边导航栏</string>
+    <string name="navigation_drawer_close">打开侧边导航栏</string>
+
+    <!--    navigation header  -->
     <string name="nav_header_title">导航栏标题</string>
     <string name="nav_header_subtitle">导航栏副标题</string>
     <string name="nav_header_desc">导航栏描述</string>
+
+    <!--  toolbar menu  -->
     <string name="action_refresh">刷新</string>
     <string name="action_forward">前进</string>
-    <string name="action_about">关于</string>
-    <string name="action_exit">退出</string>
 
-    <string name="menu_home">主页</string>
+    <!--  navigation menu  -->
     <string name="menu_download">下载</string>
     <string name="menu_settings">设置</string>
+    <string name="menu_exit">退出</string>
 
+    <!--  default values  -->
     <string name="default_url">https://www.baidu.com</string>
+
+    <!--  hints  -->
     <string name="url_hint">网址</string>
+
+    <!--  messages  -->
     <string name="no_forward_warning">没有可前进的页面</string>
+
+    <!--  menu item  -->
+    <string name="menu_item_mark_resource">标记为资源</string>
+    <string name="menu_item_mark_button">标记为翻页按钮</string>
+    <string name="menu_item_expand_range">扩大索引范围</string>
 </resources>

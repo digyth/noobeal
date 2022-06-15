@@ -1,9 +1,12 @@
 <resources>
+
     <!-- Base application theme. -->
-    <style name="Theme.Noobeal" parent="Theme.MaterialComponents.DayNight.NoActionBar.Bridge">
-        <!-- Status bar color. -->
-        <item name="android:statusBarColor" >?attr/colorAccent</item>
-        <!-- Customize your theme here. -->
+    <style name="Theme.Noobeal" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+
+        <item name="android:statusBarColor">@color/foreground_color</item>
+        <item name="colorAccent">@color/foreground_color</item>
+        <item name="colorPrimary">@color/foreground_color</item>
+        <item name="colorPrimaryDark">@color/background_color</item>
     </style>
 
     <style name="Theme.Noobeal.NoActionBar">
