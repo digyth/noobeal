@@ -71,13 +71,16 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             R.id.action_forward -> if (webView.canGoForward()) {
                 webView.goForward()
             } else {
-                Toast.makeText(this, getString(R.string.no_forward_warning), Toast.LENGTH_SHORT)
+                Toast.makeText(this, R.string.no_forward_warning, Toast.LENGTH_SHORT)
                     .show()
             }
         }
         return super.onOptionsItemSelected(item)
     }
 
+    /**
+     * go back to the previous page when available, otherwise exit the app after double click.
+     */
     override fun onBackPressed() {
         if (webView.canGoBack()) {
             webView.goBack()
@@ -87,10 +90,14 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             super.finish()
         } else {
             lastBack = System.currentTimeMillis()
-            Toast.makeText(this, "再按一次退出APP", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, R.string.before_exit, Toast.LENGTH_SHORT).show()
         }
     }
 
+
+    /**
+     * Initialize the web view.
+     */
     private fun initWebView() {
         webView = binding.appBarMain.contentMain.webView
         webViewController = BrowserController(this, webView)
@@ -106,7 +113,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         return true
     }
 
-    override fun onEditorAction(v: TextView, actionId: Int, event: KeyEvent): Boolean {
+    override fun onEditorAction(v: TextView, actionId: Int, event: KeyEvent?): Boolean {
         webView.loadUrl(v.text.toString())
         return true
     }
@@ -116,15 +123,8 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     private val refreshBtn: MenuItem by lazy { menu.findItem(R.id.action_refresh) }
     private val progressBar: ProgressBar by lazy { binding.appBarMain.contentMain.webViewProgress }
 
-    override fun loadUrl(url: String): String {
-        if (url.startsWith("javascript:")) return url
-        val newUrl = if (url.startsWith("http")) {
-            url
-        } else {
-            "https://$url"
-        }
-        urlEditor.setText(newUrl)
-        return newUrl
+    override fun onLoadUrl(url: String) {
+        urlEditor.setText(url)
     }
 
     override fun onPageStarted(view: WebView, url: String, favicon: Bitmap?) {

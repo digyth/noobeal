@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/wzm80/AppData/Local/Android/Sdk/platforms/android-32/data/res/layout/simple_list_item_1.xml" value="0.109375" />
         <entry key="..\:/Users/wzm80/Desktop/projects/github/noobeal/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2265" />
         <entry key="..\:/Users/wzm80/Desktop/projects/github/noobeal/app/src/main/res/drawable/ic_menu_camera.xml" value="0.2265" />
         <entry key="..\:/Users/wzm80/Desktop/projects/github/noobeal/app/src/main/res/drawable/ic_menu_download.xml" value="0.2265" />
@@ -16,6 +17,10 @@
         <entry key="..\:/Users/wzm80/Desktop/projects/github/noobeal/app/src/main/res/layout/fragment_gallery.xml" value="0.20380434782608695" />
         <entry key="..\:/Users/wzm80/Desktop/projects/github/noobeal/app/src/main/res/layout/fragment_home.xml" value="0.109375" />
         <entry key="..\:/Users/wzm80/Desktop/projects/github/noobeal/app/src/main/res/layout/nav_header_main.xml" value="0.20380434782608695" />
+        <entry key="..\:/Users/wzm80/Desktop/projects/github/noobeal/app/src/main/res/layout/selector_images.xml" value="0.109375" />
+        <entry key="..\:/Users/wzm80/Desktop/projects/github/noobeal/app/src/main/res/layout/selector_images_dialog.xml" value="0.1838768115942029" />
+        <entry key="..\:/Users/wzm80/Desktop/projects/github/noobeal/app/src/main/res/layout/selector_images_item.xml" value="0.2033514492753623" />
+        <entry key="..\:/Users/wzm80/Desktop/projects/github/noobeal/app/src/main/res/layout/selector_images_list.xml" value="0.109375" />
         <entry key="..\:/Users/wzm80/Desktop/projects/github/noobeal/app/src/main/res/layout/web_view_menu.xml" value="0.20380434782608695" />
         <entry key="..\:/Users/wzm80/Desktop/projects/github/noobeal/app/src/main/res/menu/activity_main_drawer.xml" value="0.24947916666666667" />
         <entry key="..\:/Users/wzm80/Desktop/projects/github/noobeal/app/src/main/res/menu/main.xml" value="0.24947916666666667" />

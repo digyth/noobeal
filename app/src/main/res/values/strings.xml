@@ -25,11 +25,15 @@
     <string name="url_hint">URL</string>
 
     <!--  messages  -->
+    <string name="before_exit">click again to exit</string>
     <string name="no_forward_warning">No more forward</string>
 
     <!--  menu item  -->
     <string name="menu_item_mark_resource">Mark as image(s)</string>
     <string name="menu_item_mark_button">Mark as button to next page</string>
     <string name="menu_item_expand_range">Expand search area</string>
+
+    <!--  disc  -->
+    <string name="disc_selector_image">Image In Area</string>
 
 </resources>

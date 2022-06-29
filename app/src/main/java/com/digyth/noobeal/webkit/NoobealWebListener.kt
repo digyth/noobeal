@@ -5,7 +5,7 @@ import android.webkit.WebView
 
 interface NoobealWebListener {
 
-    fun loadUrl(url: String):String
+    fun onLoadUrl(url: String)
 
     fun onPageStarted(view: WebView, url: String, favicon: Bitmap?)
 

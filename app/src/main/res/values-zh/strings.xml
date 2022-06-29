@@ -26,10 +26,14 @@
     <string name="url_hint">网址</string>
 
     <!--  messages  -->
+    <string name="before_exit">再按一次退出APP</string>
     <string name="no_forward_warning">没有可前进的页面</string>
 
     <!--  menu item  -->
     <string name="menu_item_mark_resource">标记为资源</string>
     <string name="menu_item_mark_button">标记为翻页按钮</string>
     <string name="menu_item_expand_range">扩大索引范围</string>
+
+    <!--  disc  -->
+    <string name="disc_selector_image">区域内的图片</string>
 </resources>
